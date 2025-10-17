@@ -1,0 +1,7 @@
+"use client";
+
+import Notifications from "../../screens/Notificaciones/notifications";
+
+export default function NotificationsPage() {
+  return <Notifications />;
+}

@@ -1,0 +1,69 @@
+import React from "react";
+import "./notifications-design.css";
+
+export default function Notifications() {
+  const notifications = [
+    {
+      type: "inbox",
+      title: "Inbox",
+      time: "Hace 17 mins • 20/4/2025 15:05:27",
+      message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare eget sapien a consectetur.",
+    },
+    {
+      type: "warning",
+      title: "Advertencia",
+      time: "Hace 17 mins • 20/4/2025 15:05:27",
+      message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare eget sapien a consectetur.",
+    },
+    {
+      type: "error",
+      title: "Error",
+      time: "Hace 17 mins • 20/4/2025 15:05:27",
+      message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare eget sapien a consectetur.",
+    },
+  ];
+
+  const getIcon = (type) => {
+    switch (type) {
+      case "inbox":
+        return "ℹ️";
+      case "warning":
+        return "⚠️";
+      case "error":
+        return "❌";
+      default:
+        return "";
+    }
+  };
+
+  return (
+    <div className="container">
+      <header className="header">
+        <div className="admin-icon">ADMIN</div>
+        <h2>Notificaciones</h2>
+        <div className="search-icon">🔍</div>
+      </header>
+
+      <div className="notifications-list">
+        {notifications.map((n, index) => (
+          <div key={index} className={`notification ${n.type}`}>
+            <div className="icon">{getIcon(n.type)}</div>
+            <div className="content">
+              <h3>{n.title}</h3>
+              <span className="time">{n.time}</span>
+              <p>{n.message}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="floating-button">✉️</div>
+
+      <footer className="bottom-nav">
+        <div className="nav-item">🏠</div>
+        <div className="nav-item">➕</div>
+        <div className="nav-item">🔔</div>
+      </footer>
+    </div>
+  );
+}
