@@ -1,0 +1,92 @@
+* {
+  font-family: "Segoe UI", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e9effc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+h2 {
+  color: #1b3b8b;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  margin: 0 auto 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  color: #2a4ba0;
+  font-weight: 500;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+select, input[type="text"], input[type="file"] {
+  width: 100%;
+  padding: 5px 0;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  outline: none;
+  margin-top: 2px;
+  font-size: 14px;
+  background: transparent;
+}
+
+#firmaBtn {
+  width: 100%;
+  margin-top: 15px;
+  background-color: #e0e0e0;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  color: #555;
+  font-weight: 500;
+  cursor: not-allowed;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+button.aceptar, button.cancelar {
+  background-color: #98b4f0;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+button.cancelar {
+  background-color: #b2c4f5;
+}
+
+button.aceptar:hover {
+  background-color: #6e9af0;
+}
+
+button.cancelar:hover {
+  background-color: #8eaaf5;
+}
